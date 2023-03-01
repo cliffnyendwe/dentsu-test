@@ -6,6 +6,7 @@ from openpyxl import load_workbook
 import datetime
 import re
  
+# Connecting database 
 database = MySQLdb.connect(
                 host="localhost",
                 user="root",
@@ -15,6 +16,7 @@ database = MySQLdb.connect(
             )
 cursor = database.cursor()
 
+# Opening the log file then splitting it into lines.
 with open('log.txt') as f:
 
     for line in f:
